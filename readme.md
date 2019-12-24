@@ -7,7 +7,7 @@ It can be divided into CPU version and GPU version. Some project will adopt GPU 
 
 * Large model uses docker container inference,and destroy the container after completion
 
-[[中文说明]](/readme_cn.md) [[deploy]](https://pc.zzz9958123.com:500) [[video tutorial]](https://youtu.be/qS3-gk3_UBI)
+[[中文说明]](/readme_cn.md) [[deploy]](https://pc.zzz9958123.com:5000) [[video tutorial]](https://youtu.be/qS3-gk3_UBI)
 
 # sample
 <p align="center">openface <br> <img src="./static/static_img/openfacesample.png" ></p>
@@ -71,7 +71,7 @@ go check **http(s)://0.0.0.0:5000**
 
 
 # rest-api
-All projects support rest API methods
+All projects support rest API methods  
 URL is the project address,Post requests to submit form, input {Base64: Base64 picture}, and return JSON calculation result. Refer to response JSON of demo page for structure
 
 ## example
