@@ -3,6 +3,8 @@ LABEL author="zqj"
 ENV PYTHONIOENCODING=utf-8
 
 #ADD sources.list /etc/apt/
+
+ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update --fix-missing && \
     apt-get install -y --fix-missing --no-install-recommends \
             software-properties-common \
@@ -40,6 +42,5 @@ COPY ./nginx_flask.conf /etc/nginx/sites-available/
 RUN ln -s /etc/nginx/sites-available/nginx_flask.conf /etc/nginx/sites-enabled/nginx_flask.conf
 COPY ./nginx.conf /etc/nginx/nginx.conf
 # timezone
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get install tzdata -y && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && rm -rf /var/lib/apt/lists/*
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && rm -rf /var/lib/apt/lists/*
 CMD ["bash"]

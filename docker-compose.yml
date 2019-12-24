@@ -14,7 +14,7 @@ services:
       - $PWD:$PWD
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
-    command: 'python3 demo_cpu_server.py'
+    command: 'gunicorn --workers=5 demo_cpu_server:app --certfile=ssl/cert --keyfile=ssl/key -b 0.0.0.0:5000  -t 600'
   demo_gpu_server:
     restart: always
     stdin_open: true
@@ -28,4 +28,4 @@ services:
       - $PWD:$PWD
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
-    command: 'python3 demo_gpu_server.py'
+    command: 'gunicorn --workers=5 demo_gpu_server:app --certfile=ssl/cert --keyfile=ssl/key -b 0.0.0.0:5001  -t 600'
