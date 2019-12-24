@@ -1,0 +1,31 @@
+version: "3.3"
+
+services:
+  demo_cpu_server:
+    restart: always
+    stdin_open: true
+    tty: true
+    build: ./docker
+    image: zzz9958123/demo_server:latest
+    ports:
+      - 5000:5000
+    working_dir: $PWD
+    volumes:
+      - $PWD:$PWD
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    command: 'python3 demo_cpu_server.py'
+  demo_gpu_server:
+    restart: always
+    stdin_open: true
+    tty: true
+    build: ./docker
+    image: zzz9958123/demo_server:latest
+    ports:
+      - 5001:5001
+    working_dir: $PWD
+    volumes:
+      - $PWD:$PWD
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    command: 'python3 demo_gpu_server.py'

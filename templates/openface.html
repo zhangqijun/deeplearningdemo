@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Openface</title>
+    <link rel="stylesheet" href="/static/css/openface.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module"  src="/static/js/openface.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+                        <img src="/static/static_img/zsy.png"
+                             alt="">
+                        <div class="cover active">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl.png"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/2face.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/3face.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lj.png"
+                             alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>分析结果</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="demo-swiper">
+                    <button class="demo-pre"><span><</span></button>
+                    <div class="demo-container">
+                        <ul>
+                        </ul>
+                    </div>
+                    <button class="demo-next"><span>></span></button>
+                </div>
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor_message"></div>
+                    <div class="infor">
+                        <div class="face-confidence">
+                            <div class="confidence">置信度：</div>
+                            <div class="confidencevalue"></div>
+                        </div>
+                        <div class="face-bbox">
+                            <div class="bbox">人脸区域：</div>
+                            <div class="bboxvalue"></div>
+                        </div>
+                        <div class="face-gazexyz">
+                            <div class="gazexyz">视线xyz：</div>
+                            <div class="gazexyzvalue"></div>
+                        </div>
+                        <div class="face-gazeangel">
+                            <div class="gazeangel">视线xy：</div>
+                            <div class="gazeangelvalue"></div>
+                        </div>
+                        <div class="face-pose">
+                            <div class="pose">头部姿态：</div>
+                            <div class="posevalue"></div>
+                        </div>
+                        <div class="face-pscale">
+                            <div class="pscale">头部比例：</div>
+                            <div class="pscalevalue"></div>
+                        </div>
+                        <div class="face-pr">
+                            <div class="pr">PDM模型参数pr：</div>
+                            <div class="prvalue"></div>
+                        </div>
+                        <div class="face-pt">
+                            <div class="pt">PDM模型参数pt：</div>
+                            <div class="ptvalue"></div>
+                        </div>
+                        <div class="face-p">
+                            <div class="p">非刚性形状参数：</div>
+                            <div class="pvalue"></div>
+                        </div>
+                        <div class="face-AU">
+                            <div class="AU">脸表情参数：</div>
+                            <div class="AUvalue"></div>
+                        </div>
+                        <div class="face-kpoint">
+                            <div class="kpoint">关键点：</div>
+                            <div class="kpointvalue"></div>
+                        </div>
+                        <div class="face-kpoint3d">
+                            <div class="kpoint3d">3D关键点：</div>
+                            <div class="kpoint3dvalue"></div>
+                        </div>
+                        <div class="face-eyekpoint">
+                            <div class="eyekpoint">眼睛关键点：</div>
+                            <div class="eyekpointvalue"></div>
+                        </div>
+                        <div class="face-eyekpoint3d">
+                            <div class="eyekpoint3d">眼睛3D关键点：</div>
+                            <div class="eyekpoint3dvalue"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="response-content">
+                <div class="faceapi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

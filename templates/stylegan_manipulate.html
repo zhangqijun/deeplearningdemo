@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Manipulate Big</title>
+    <link rel="stylesheet" href="/static/css/attribute_manipulate_big.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module" src="/static/js/stylegan_manipulate.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+
+                        <div class="cover active">
+                        </div>
+                        <img src="/static/static_img/lyf.jpg">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/yamy.png"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/hl.png">
+                        alt="">
+                    </li>
+                    <li>
+                        <img src="/static/static_img/cdl.png"
+                             alt="">
+                        <div class="cover">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lj.png">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lt.png">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>属性操纵</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor">
+                        年龄(右少左老): <input type="range" class="age" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('age').innerHTML=value"><span
+                            id="age"></span>
+                        <button class="manipulate"><span>提交</span></button>
+                        <br>
+                        微笑: <input type="range" class="smile" min="0" max="100" value="0"
+                                   onchange="document.getElementById('smile').innerHTML=value"><span
+                            id="smile"></span>
+                        <button class="reset"
+                                onclick="$('.age').val('0');$('.smile').val('0');$('.gender').val('0');$('.beauty').val('0');$('.glasses').val('0');$('.height').val('0');$('.width').val('0');$('.angry').val('0');$('.disgust').val('0');$('.fear').val('0');$('.happy').val('0');$('.surprise').val('0');$('.easy').val('0');$('.sad').val('0');$('.horizontal').val('0');$('.vertical').val('0');$('.rotation').val('0');$('.exposure').val('0');$('.eyesopen').val('0');$('.shape').val('0');$('.black').val('0');$('.white').val('0');$('.yellow').val('0');
+                        document.getElementById('age').innerHTML='0';
+                        document.getElementById('smile').innerHTML='0';
+                        document.getElementById('gender').innerHTML='0';
+                        document.getElementById('beauty').innerHTML='0';
+                        document.getElementById('glasses').innerHTML='0';
+                        document.getElementById('height').innerHTML='0';
+                        document.getElementById('width').innerHTML='0';
+                        document.getElementById('angry').innerHTML='0';
+                        document.getElementById('disgust').innerHTML='0';
+                        document.getElementById('fear').innerHTML='0';
+                        document.getElementById('happy').innerHTML='0';
+                        document.getElementById('surprise').innerHTML='0';
+                        document.getElementById('easy').innerHTML='0';
+                        document.getElementById('sad').innerHTML='0';
+                        document.getElementById('horizontal').innerHTML='0';
+                        document.getElementById('vertical').innerHTML='0';
+                        document.getElementById('rotation').innerHTML='0';
+                        document.getElementById('exposure').innerHTML='0';
+                        document.getElementById('eyesopen').innerHTML='0';
+                        document.getElementById('shape').innerHTML='0';
+                        document.getElementById('black').innerHTML='0';
+                        document.getElementById('white').innerHTML='0';
+                        document.getElementById('yellow').innerHTML='0';">
+                            <span>重置</span></button>
+                        <br>
+                        性别(右男左女): <input type="range" class="gender" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('gender').innerHTML=value"><span
+                            id="gender"></span><br>
+                        颜值(右高左低): <input type="range" class="beauty" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('beauty').innerHTML=value"><span
+                            id="beauty"></span><br>
+                        戴眼镜: <input type="range" class="glasses" min="0" max="100" value="0"
+                                    onchange="document.getElementById('glasses').innerHTML=value"><span
+                            id="glasses"></span><br>
+                        脸长(右短左长): <input type="range" class="height" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('height').innerHTML=value"><span
+                            id="height"></span><br>
+                        脸宽(右窄左宽): <input type="range" class="width" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('width').innerHTML=value"><span
+                            id="width"></span><br>
+                        愤怒: <input type="range" class="angry" min="0" max="50" value="0"
+                                   onchange="document.getElementById('angry').innerHTML=value"><span
+                            id="angry"></span><br>
+                        恶心: <input type="range" class="disgust" min="0" max="50" value="0"
+                                   onchange="document.getElementById('disgust').innerHTML=value"><span
+                            id="disgust"></span><br>
+                        恐惧: <input type="range" class="fear" min="0" max="50" value="0"
+                                   onchange="document.getElementById('fear').innerHTML=value"><span
+                            id="fear"></span><br>
+                        开心: <input type="range" class="happy" min="0" max="50" value="0"
+                                   onchange="document.getElementById('happy').innerHTML=value"><span
+                            id="happy"></span><br>
+                        惊讶: <input type="range" class="surprise" min="0" max="50" value="0"
+                                   onchange="document.getElementById('surprise').innerHTML=value"><span
+                            id="surprise"></span><br>
+                        平静: <input type="range" class="easy" min="0" max="50" value="0"
+                                   onchange="document.getElementById('easy').innerHTML=value"><span
+                            id="easy"></span><br>
+                        悲伤: <input type="range" class="sad" min="0" max="50" value="0"
+                                   onchange="document.getElementById('sad').innerHTML=value"><span
+                            id="sad"></span><br>
+                        水平角: <input type="range" class="horizontal" min="-100" max="100" value="0"
+                                    onchange="document.getElementById('horizontal').innerHTML=value"><span
+                            id="horizontal"></span><br>
+                        垂直角: <input type="range" class="vertical" min="-100" max="100" value="0"
+                                    onchange="document.getElementById('vertical').innerHTML=value"><span
+                            id="vertical"></span><br>
+                        相机角度: <input type="range" class="rotation" min="-100" max="100" value="0"
+                                     onchange="document.getElementById('rotation').innerHTML=value"><span
+                            id="rotation"></span><br>
+                        光照: <input type="range" class="exposure" min="-100" max="100" value="0"
+                                   onchange="document.getElementById('exposure').innerHTML=value"><span
+                            id="exposure"></span><br>
+                        睁眼(右闭左睁): <input type="range" class="eyesopen" min="-100" max="100" value="0"
+                                         onchange="document.getElementById('eyesopen').innerHTML=value"><span
+                            id="eyesopen"></span><br>
+                        脸型: <input type="range" class="shape" min="0" max="100" value="0"
+                                   onchange="document.getElementById('shape').innerHTML=value"><span
+                            id="shape"></span><br>
+                        黑种人: <input type="range" class="black" min="0" max="100" value="0"
+                                    onchange="document.getElementById('black').innerHTML=value"><span
+                            id="black"></span><br>
+                        白种人: <input type="range" class="white" min="0" max="100" value="0"
+                                    onchange="document.getElementById('white').innerHTML=value"><span
+                            id="white"></span><br>
+                        黄种人: <input type="range" class="yellow" min="0" max="100" value="0"
+                                    onchange="document.getElementById('yellow').innerHTML=value"><span
+                            id="yellow"></span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="response-content">
+                <div class="faceapi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>maskrcnn</title>
+    <link rel="stylesheet" href="/static/css/maskrcnn.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module" src="/static/js/maskrcnn.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+                        <img src="/static/static_img/maskrcnn0.jpg"
+                             alt="">
+                        <div class="cover active">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/maskrcnn1.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/maskrcnn2.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/maskrcnn3.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/maskrcnn4.jpg"
+                             alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>分析结果</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="demo-swiper">
+                    <button class="demo-pre"><span><</span></button>
+                    <div class="demo-container">
+                        <ul>
+                        </ul>
+                    </div>
+                    <button class="demo-next"><span>></span></button>
+                </div>
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor_message">
+                    </div>
+                    <div class="infor">
+                        <div class="bboxes">
+                            <div class="bboxes_">框框：</div>
+                            <div class="bboxesvalue"></div>
+                        </div>
+                        <div class="labels">
+                            <div class="labels_">标签：</div>
+                            <div class="labelsvalue"></div>
+                        </div>
+                        <div class="scores">
+                            <div class="scores_">分数：</div>
+                            <div class="scoresvalue"></div>
+                        </div>
+                        <div class="segment">
+                            <div class="segment_">分割：</div>
+                            <div class="segmentvalue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="response-content">
+                <p>
+                <div class="faceapi"></div>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

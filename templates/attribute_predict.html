@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Predict</title>
+    <link rel="stylesheet" href="/static/css/attribute_predict.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module" src="/static/js/attribute_predict.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+                        <img src="/static/static_img/zsy.png"
+                             alt="">
+                        <div class="cover active">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl.png"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/2face.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/3face.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lj.png"
+                             alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>分析结果</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="demo-swiper">
+                    <button class="demo-pre"><span><</span></button>
+                    <div class="demo-container">
+                        <ul>
+                        </ul>
+                    </div>
+                    <button class="demo-next"><span>></span></button>
+                </div>
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor_message"></div>
+                    <div class="infor">
+                        <div class="face-confidence">
+                            <a class="confidence">人脸置信度：</a>
+                            <a class="confidencevalue"></a>
+                        </div>
+                        <div class="face-bbox">
+                            <a class="bbox">人脸区域：</a>
+                            <a class="bboxvalue"></a>
+                        </div>
+                        <div class="face-age">
+                            <a class="age">年龄：</a>
+                            <a class="agevalue"></a>
+                        </div>
+                        <div class="face-beauty">
+                            <a class="beauty">颜值：</a>
+                            <a class="beautyvalue"></a>
+                        </div>
+                        <div class="face-blurness">
+                            <a class="blurness">模糊度：</a>
+                            <a class="blurnessvalue"></a>
+                        </div>
+                        <div class="face-anger">
+                            <a class="anger">生气表情：</a>
+                            <a class="angervalue"></a>
+                        </div>
+                        <div class="face-disgust">
+                            <a class="disgust">恶心表情：</a>
+                            <a class="disgustvalue"></a>
+                        </div>
+                        <div class="face-fear">
+                            <a class="fear">恐惧表情：</a>
+                            <a class="fearvalue"></a>
+                        </div>
+                        <div class="face-happiness">
+                            <a class="happiness">开心表情：</a>
+                            <a class="happinessvalue"></a>
+                        </div>
+                        <div class="face-neutral">
+                            <a class="neutral">中性表情：</a>
+                            <a class="neutralvalue"></a>
+                        </div>
+                        <div class="face-sadness">
+                            <a class="sadness">悲伤表情：</a>
+                            <a class="sadnessvalue"></a>
+                        </div>
+                        <div class="face-surprise">
+                            <a class="surprise">惊讶表情：</a>
+                            <a class="surprisevalue"></a>
+                        </div>
+                        <div class="face-pitch">
+                            <a class="pitch">俯仰角：</a>
+                            <a class="pitchvalue"></a>
+                        </div>
+                        <div class="face-roll">
+                            <a class="roll">翻滚角：</a>
+                            <a class="rollvalue"></a>
+                        </div>
+                        <div class="face-yaw">
+                            <a class="yaw">偏航角：</a>
+                            <a class="yawvalue"></a>
+                        </div>
+                        <div class="face-mouth_open">
+                            <a class="mouth_open">嘴巴微张：</a>
+                            <a class="mouth_openvalue"></a>
+                        </div>
+                        <div class="face-smile">
+                            <a class="smile">微笑：</a>
+                            <a class="smilevalue"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="response-content">
+                <div class="faceapi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>demo导航页</title>
+    <link rel="shortcut icon" href="/static/favicon.ico"/>
+    <link rel="stylesheet" href="/static/css/iconfont.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<div class="container" id="container">
+    <aside class="left-bar" id="leftBar">
+        <div class="title">
+            <p>导航</p>
+        </div>
+        <nav class="nav">
+            <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i>demo</a><i class="line"></i></div>
+            <ul class="nav-item" id="navItem">
+                <li><a href="#facedetec" class="active"><i class="iconfont icon-shequ"></i>人脸检测</a></li>
+                <li><a href="#objdetec"><i class="iconfont icon-blogger"></i>物体检测</a></li>
+                <li><a href="#faceclasi"><i class="iconfont icon-wendangdocument78"></i>人脸分类</a></li>
+                <li><a href="#tfjs"><i class="iconfont icon-tool"></i>tensorflow-js</a></li>
+                <li><a href="#GAN"><i class="iconfont icon-designer"></i>AI生成</a></li>
+                <li><a href="#demoelse"><i class="iconfont icon-xuexi1"></i>引用demo</a></li>
+                <li><a href="#docu"><i class="iconfont icon-yunying"></i>api手册</a></li>
+                <li class="download"><a href="http://pc.zzz9958123.com:8081/root/demoproject"><i
+                        class="iconfont icon-github"></i>源码下载</a></li>
+            </ul>
+            <div class="item comment"><a target="_blank" href="https://www.zzz9958123.com"><i
+                    class="iconfont icon-liuyan"></i>留言</a></div>
+        </nav>
+    </aside>
+    <section class="main">
+        <div id="mainContent">
+            <!-- 手机端菜单 -->
+            <div id="menu-box">
+                <div id="menu">
+                    <input type="checkbox" id="menu-form">
+                    <label for="menu-form" class="menu-spin">
+                        <div class="line diagonal line-1"></div>
+                        <div class="line horizontal"></div>
+                        <div class="line diagonal line-2"></div>
+                    </label>
+                </div>
+            </div>
+            <!-- 人脸检测 -->
+            <div class="box">
+                <a href="#" name="facedetec"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-shequ"></i>人脸检测</div>
+                </div>
+                <div>
+                    <a href="https://pc.zzz9958123.com:5000/mtcnn">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/mtcnn.jpg" alt="MTCNN"> MTCNN</div>
+                            <div class="desc">快速轻便的人脸检测</div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5000/openface">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/openface.png" alt="openface"> openface</div>
+                            <div class="desc">全面准确的人脸检测</div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5000/face_alignment">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/openface.png" alt="facealignment">
+                                face-alignment
+                            </div>
+                            <div class="desc">人脸旋转对齐</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 物体检测 -->
+            <div class="box">
+                <a href="#" name="objdetec"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-blogger"></i>物体检测</div>
+                </div>
+                <div>
+                    <a href="https://pc.zzz9958123.com:5000/maskrcnn">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/maskrcnn.png" alt="mask-rcnn"> mask-rcnn
+                            </div>
+                            <div class="desc">mask-rcnn检测加分割</div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/detectron2">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/detectron2.png" alt="detectron2"> detectron2
+                            </div>
+                            <div class="desc">Detectron2效果比maskrcnn好</div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/densepose">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/densepose.png"> 人体姿态检测
+                            </div>
+                            <div class="desc">
+                                densepose
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/hair_colour">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/hcf.png"> 分割美妆
+                            </div>
+                            <div class="desc">
+                                人脸部位分割上色化妆
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 人脸分类 -->
+            <div class="box">
+                <a href="" name="faceclasi"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-wendangdocument78"></i>人脸分类</div>
+                </div>
+                <div>
+                    <a href="https://pc.zzz9958123.com:5000/attribute_predict">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/stylegan.png" alt="attribute_predict"> 属性预测
+                            </div>
+                            <div class="desc">识别脸部年龄,表情,角度等属性</div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5000/verification">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/verification.png" alt="verification"> 人脸校验
+                            </div>
+                            <div class="desc">人脸校验,常用于人证核身,闸机人脸校验</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- AI生成 -->
+            <div class="box">
+                <a href="" name="GAN"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-wendangdocument78"></i>AI生成</div>
+                </div>
+                <div>
+                    <a href="https://pc.zzz9958123.com:5000/prnet">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/prnet.jpg"> 人脸三维重建
+                            </div>
+                            <div class="desc">
+                                PRNet单目图片输入人脸三维重建
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5000/srgan">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/srgan2.png"> 图片超分辨率
+                            </div>
+                            <div class="desc">
+                                SRNET模糊图片变高清
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5000/beautygan">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/beautygan.png"> AI美妆
+                            </div>
+                            <div class="desc">
+                                beautygan,图片级自动美妆
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/glow_manipulate">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/glow.png"> glow属性编辑
+                            </div>
+                            <div class="desc">
+                                Glow: 潜码属性特征操纵,图小项目多
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/stylegan_manipulate">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/stylegan_att_ma.png"> stylegan属性编辑
+                            </div>
+                            <div class="desc">
+                                stylegan属性操纵,改变人脸属性变老变性等
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/glow_interpolation">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/glow.png"> glow人脸插值
+                            </div>
+                            <div class="desc">
+                                glow 人脸插值,图小速度快
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://pc.zzz9958123.com:5001/stylegan_interpolation">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/stylegan_inter.png"> stylegan人脸插值
+                            </div>
+                            <div class="desc">
+                                stylegan 高清人脸插值图片生成
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- tensorflow-js -->
+            <div class="box">
+                <a href="" name="tfjs"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-tool"></i>tensorflow-js</div>
+                </div>
+                <div>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/face_and_landmark_detection/">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs1.png" alt="KeyPoint"> 关键点</div>
+                            <div class="desc">face_and_landmark_detection</div>
+                        </div>
+                    </a>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/face_expression_recognition/">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs2.png" alt="Emotion"> 表情识别</div>
+                            <div class="desc">face_expression_recognition</div>
+                        </div>
+                    </a>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/face_recognition">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs3.png" alt="FaceRecogntion"> 人脸识别</div>
+                            <div class="desc">js人脸识别</div>
+                        </div>
+                    </a>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/video_face_tracking/">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs4.png" alt="VideoTracking"> 人脸跟踪</div>
+                            <div class="desc">视频人脸跟踪</div>
+                        </div>
+                    </a>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/webcam_face_tracking/">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs5.png" alt="WebCameraTracking"> 人脸跟踪摄像头
+                            </div>
+                            <div class="desc">web camera 人脸跟踪</div>
+                        </div>
+                    </a>
+                    <a href="https://justadudewhohacks.github.io/face-api.js/webcam_face_expression_recognition/">
+                        <div class="item">
+                            <div class="logo"><img src="/static/static_img/facejs6.png" alt="WebCameraEmotion">
+                                人脸表情识别摄像头
+                            </div>
+                            <div class="desc">web camera 人脸跟踪</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+            <!-- 引用demo -->
+            <div class="box">
+                <a href="#" name="demoelse"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-xuexi1"></i>引用demo</div>
+                </div>
+                <div>
+                    <a href="https://www.nvidia.com/research/inpainting/">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/demofromelse3.png"> 图像修复
+                            </div>
+                            <div class="desc">可以P图可以去马赛克</div>
+                        </div>
+                    </a>
+                    <a href="http://nvidia-research-mingyuliu.com/gaugan/">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/demofromelse2.png"> guagan
+                            </div>
+                            <div class="desc">小学生也可以画山水画</div>
+                        </div>
+                    </a>
+                    <a href="http://nvidia-research-mingyuliu.com/ganimal/">
+                        <div class="item">
+                            <div class="logo">
+                                <img src="/static/static_img/demofromelse1.png"> ganimal
+                            </div>
+                            <div class="desc">把我的狗换个品种</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- api手册 -->
+            <div class="box">
+                <a href="" name="docu"></a>
+                <div class="sub-category">
+                    <div><i class="iconfont icon-yunying"></i>api手册</div>
+                </div>
+                <div>
+                    <a href="http://pc.zzz9958123.com:8081/root/demoproject">
+                        <div class="item">
+                            <div class="no-logo">api文档</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="copyright">
+                    <div>
+                        Copyright © 2019 - 2020
+                        <a href="https://www.zzz9958123.com">我的博客</a>
+                    </div>
+                </div>
+            </footer>
+            <div id="fixedBar">
+                <svg class="Zi Zi--BackToTop" title="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24"
+                     height="24">
+                    <path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="/static/js/jquery.js"></script>
+<script>
+    var oMenu = document.getElementById('menu');
+    var oLeftBar = document.getElementById('leftBar');
+    var menuFrom = document.getElementById('menu-form');
+
+    oMenu.onclick = function () {
+        if (oLeftBar.offsetLeft == 0) {
+            oLeftBar.style.left = -249 + 'px';
+        } else {
+            oLeftBar.style.left = 0;
+        }
+    }
+
+
+    // 监听页面宽度变化
+    window.onresize = function () {
+        judgeWidth();
+        // console.log(document.documentElement.clientWidth);
+    };
+
+    // 判断页面宽度
+    function judgeWidth() {
+        if (document.documentElement.clientWidth > 481) {
+            oLeftBar.style.left = 0;
+        } else {
+            oLeftBar.style.left = -249 + 'px';
+        }
+    }
+
+
+    var oNavItem = document.getElementById('navItem');
+    var aA = oNavItem.getElementsByTagName('a');
+    for (var i = 0; i < aA.length; i++) {
+        aA[i].onclick = function () {
+            for (var j = 0; j < aA.length; j++) {
+                aA[j].className = '';
+            }
+            this.className = 'active';
+            if (oLeftBar.offsetLeft == 0) {
+                if (document.documentElement.clientWidth <= 481) {
+                    oLeftBar.style.left = -249 + 'px';
+                    menuFrom.checked = false;
+
+                }
+            }
+        }
+    }
+
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+            $('#fixedBar').fadeIn(300);
+        } else {
+            $('#fixedBar').fadeOut(300);
+        }
+    });
+    $('#fixedBar').click(function () {
+        $('html,body').animate({scrollTop: '0px'}, 800);
+    })
+</script>
+</body>
+
+</html>

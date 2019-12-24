@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MTCNN</title>
+    <link rel="stylesheet" href="/static/css/mtcnn.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/mtcnn.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p><br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+                        <img src="/static/static_img/demo-pic1.jpg"
+                             alt="">
+                        <div class="cover active">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/demo-pic10.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/demo-pic8.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/demo-pic6.jpg"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/demo-pic1.jpg"
+                             alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>分析结果</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="demo-swiper">
+                    <button class="demo-pre"><span><</span></button>
+                    <div class="demo-container">
+                        <ul>
+                        </ul>
+                    </div>
+                    <button class="demo-next"><span>></span></button>
+                </div>
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor_message">
+                    </div>
+                    <div class="infor">
+                        <div class="face-confidence">
+                            <div class="confidence">置信度：<br></div>
+                            <div class="confidencevalue"></div>
+                        </div>
+                        <div class="face-bbox">
+                            <div class="bbox">人脸区域：<br></div>
+                            <div class="bboxvalue"></div>
+                        </div>
+                        <div class="face-kpoint">
+                            <div class="kpoint">关键点：<br></div>
+                            <div class="kpointvalue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="response-content">
+                <p>
+                <div class="faceapi"></div>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

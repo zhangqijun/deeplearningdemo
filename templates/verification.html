@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification</title>
+    <link rel="stylesheet" href="/static/css/verification.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module"  src="/static/js/verification.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top1">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-top2">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container1">
+                <ul>
+                    <li>
+                        <img src="/static/static_img/zsy.png" alt="">
+                        <div class="cover active">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl1.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover"></div>
+                        <img src="/static/static_img/cdl2.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover"></div>
+                        <img src="/static/static_img/cdl3.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lj.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/gzl.jpg" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/sdd.jpg" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-container2">
+                <ul>
+                    <li>
+                        <div class="cover active">
+                        </div>
+                        <img src="/static/static_img/cdl.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl1.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover"></div>
+                        <img src="/static/static_img/cdl2.png" alt="">
+                    </li>
+                    <li>
+                        <div class="cover"></div>
+                        <img src="/static/static_img/cdl3.png" alt="">
+                    </li>
+                    <li>
+                        <img src="/static/static_img/lj.png" alt="">
+                        <div class="cover ">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/gzl.jpg" alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/sdd.jpg" alt="">
+                    </li>
+
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom1">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>图1本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file1">
+            </div>
+            <div class="camera1">
+                <i class="usecamera"></i>
+                <span>图1摄像头</span>
+                <input type="button" id="camera_button1">
+            </div>
+            <div class="urlSearch1">
+                <input type="text" class="imgUrl1" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit1">图1检测</button>
+                </div>
+            </div>
+        </div>
+        <div class="face-bottom2">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>图2本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file2">
+            </div>
+            <div class="camera2">
+                <i class="usecamera"></i>
+                <span>图2摄像头</span>
+                <input type="button" id="camera_button2">
+            </div>
+            <div class="urlSearch2">
+                <input type="text" class="imgUrl2" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit2">图2检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>分析结果</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="result-infor">
+                    <div class="infor_message"></div>
+                    <div class="infor">
+                        <div class="face-res">
+                            <div class="res" style="display: inline-block;">是否为同一个人：</div>
+                            <div class="resvalue" style="display: inline-block;"></div>
+                        </div>
+                        <div class="face-dist">
+                            <div class="dist" style="display: inline-block;">距离：</div>
+                            <div class="distvalue" style="display: inline-block;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="response-content">
+                <div class="faceapi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Manipulate Small</title>
+    <link rel="stylesheet" href="/static/css/attribute_manipulate_small.css">
+    <link rel="stylesheet" href="/static/css/spin.css">
+    <script src="/static/js/jquery.js"></script>
+    <script type="module" src="/static/js/glow_manipulate.js"></script>
+    <meta name="referrer" content="no-referrer"/>
+    <link href="favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+<div class="box">
+    <div class="box-left">
+        <div class="face-top">
+            <p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>点击一张示例图片，或者通过文件、URL上传来查看效果<br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <div class="face-swiper">
+            <button class="pre"><span><</span></button>
+            <div class="swiper-container">
+                <ul>
+                    <li>
+
+                        <div class="cover active">
+                        </div>
+                        <img src="/static/static_img/lyf.jpg">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/yamy.png"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/hl.png">
+                        alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/cdl.png"
+                             alt="">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lj.png">
+                    </li>
+                    <li>
+                        <div class="cover">
+                        </div>
+                        <img src="/static/static_img/lt.png">
+                    </li>
+                </ul>
+            </div>
+            <button class="next"><span>></span></button>
+        </div>
+        <div class="face-bottom">
+            <div class="fileUpload">
+                <i class="icon-upload"></i>
+                <span>本地上传</span>
+                <input type="file" accept="image/png,image/jpeg" id="file">
+            </div>
+            <div class="camera">
+                <i class="usecamera"></i>
+                <span>摄像头</span>
+                <input type="button" id="camera_button">
+            </div>
+            <div class="urlSearch">
+                <input type="text" class="imgUrl" placeholder="图片url">
+                <div class="searchImg">
+                    <button class="submit">检测</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-right">
+        <div class="tab-bar">
+            <div class="result">
+                <span>属性操纵</span>
+            </div>
+            <div class="response">
+                <span>Response JSON</span>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="result-content">
+                <div class="hr"></div>
+                <div class="result-infor">
+                    <div class="infor">
+                        年轻: <input type="range" class="Young" min="0" max="100" value="0"
+                                   onchange="document.getElementById('Young').innerHTML=value"><span id="Young"></span>
+                        <button class="manipulate"><span>提交</span></button>
+                        <br>
+                        年老: <input type="range" class="old" min="0" max="100" value="0"
+                                   onchange="document.getElementById('old').innerHTML=value"><span
+                            id="old"></span>
+                        <button style="float: right" class="reset"
+                                onclick="$('.happiness').val('0');$('.ArchedEyebrows').val('0');$('.beautyfemale').val('0');$('.Attractive').val('0');$('.old').val('0');$('.surprise').val('0');$('.smile').val('0');$('.Bangs').val('0');$('.BlackHair').val('0');$('.BlondHair').val('0');$('.BrownHair').val('0');$('.BushyEyebrows').val('0');$('.HeavyMakeup').val('0');$('.Male').val('0');$('.NarrowEyes').val('0');$('.PaleSkin').val('0');$('.smile').val('0');$('.Young').val('0');document.getElementById('happiness').innerHTML='0';document.getElementById('ArchedEyebrows').innerHTML='0';document.getElementById('beautyfemale').innerHTML='0';document.getElementById('Attractive').innerHTML='0';document.getElementById('old').innerHTML='0';document.getElementById('surprise').innerHTML='0';document.getElementById('smile').innerHTML='0';document.getElementById('Bangs').innerHTML='0';document.getElementById('surprise').innerHTML='0';document.getElementById('BlackHair').innerHTML='0';document.getElementById('BlondHair').innerHTML='0';document.getElementById('BrownHair').innerHTML='0';document.getElementById('BushyEyebrows').innerHTML='0';document.getElementById('HeavyMakeup').innerHTML='0';document.getElementById('Male').innerHTML='0';document.getElementById('NarrowEyes').innerHTML='0';document.getElementById('PaleSkin').innerHTML='0';document.getElementById('smile').innerHTML='0';document.getElementById('Young').innerHTML='0';">
+                            <span>重置</span></button>
+                        <br>
+                        开心: <input type="range" class="happiness" min="0" max="100" value="0"
+                                   onchange="document.getElementById('happiness').innerHTML=value"><span
+                            id="happiness"></span> <br>
+                        震惊: <input type="range" class="surprise" min="0" max="100" value="0"
+                                   onchange="document.getElementById('surprise').innerHTML=value"><span
+                            id="surprise"></span> <br>
+                        微笑: <input type="range" class="smile" min="0" max="100" value="0"
+                                   onchange="document.getElementById('smile').innerHTML=value"><span
+                            id="smile"></span> <br>
+                        性别: <input type="range" class="Male" min="-100" max="100" value="0"
+                                   onchange="document.getElementById('Male').innerHTML=value"><span id="Male"></span><span>（右男左女）</span>
+                        <br>
+                        尖眉毛: <input type="range" class="ArchedEyebrows" min="0" max="100" value="0"
+                                    onchange="document.getElementById('ArchedEyebrows').innerHTML=value"><span
+                            id="ArchedEyebrows"></span> <br>
+                        浓眉毛: <input type="range" class="BushyEyebrows" min="0" max="100" value="0"
+                                    onchange="document.getElementById('BushyEyebrows').innerHTML=value"><span
+                            id="BushyEyebrows"></span> <br>
+                        吸引人: <input type="range" class="Attractive" min="0" max="100" value="0"
+                                    onchange="document.getElementById('Attractive').innerHTML=value"><span
+                            id="Attractive"></span> <br>
+                        变好看: <input type="range" class="beautyfemale" min="0" max="100" value="0"
+                                    onchange="document.getElementById('beautyfemale').innerHTML=value"><span
+                            id="beautyfemale"></span> <br>
+                        白皮肤: <input type="range" class="PaleSkin" min="0" max="100" value="0"
+                                    onchange="document.getElementById('PaleSkin').innerHTML=value"><span
+                            id="PaleSkin"></span> <br>
+                        化妆: <input type="range" class="HeavyMakeup" min="0" max="100" value="0"
+                                   onchange="document.getElementById('HeavyMakeup').innerHTML=value"><span
+                            id="HeavyMakeup"></span> <br>
+                        黑头发: <input type="range" class="BlackHair" min="0" max="100" value="0"
+                                    onchange="document.getElementById('BlackHair').innerHTML=value"><span
+                            id="BlackHair"></span> <br>
+                        金头发: <input type="range" class="BlondHair" min="0" max="100" value="0"
+                                    onchange="document.getElementById('BlondHair').innerHTML=value"><span
+                            id="BlondHair"></span> <br>
+                        棕头发: <input type="range" class="BrownHair" min="0" max="100" value="0"
+                                    onchange="document.getElementById('BrownHair').innerHTML=value"><span
+                            id="BrownHair"></span> <br>
+                        刘海: <input type="range" class="Bangs" min="0" max="100" value="0"
+                                   onchange="document.getElementById('Bangs').innerHTML=value"><span id="Bangs"></span>
+                        <br>
+                        咪眼睛: <input type="range" class="NarrowEyes" min="0" max="100" value="0"
+                                    onchange="document.getElementById('NarrowEyes').innerHTML=value"><span
+                            id="NarrowEyes"></span> <br>
+                    </div>
+
+                </div>
+            </div>
+            <div class="response-content">
+                <div class="faceapi"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
