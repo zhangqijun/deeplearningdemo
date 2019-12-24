@@ -17,6 +17,6 @@ numpy
 nmslib
 pymysql
 imutils
-tensorflow-gpu==1.13.1
+tensorflow-gpu==1.15.0
 dlib
 imageio
