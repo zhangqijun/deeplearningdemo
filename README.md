@@ -1,3 +1,0 @@
-# deeplearningdemo
-deeplearningdemo
-# coming soon
