@@ -200,16 +200,16 @@ $(function () {
         $(".cover").css({"background": "rgba(0,0,0,0.8)", "border": "none"});
         var src = window.URL.createObjectURL($("#file")[0].files[0]);
         $(".face-top").empty();
-        $(".face-top").append("<img src='' class='progress' style='display:block'>");
-        $(".progress").attr("src", "/static/progress.gif");
-        $(".manipulate").attr("style", "display:none");
-        $(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
-        $(".facetopimg").attr("src", src);
+        //$(".face-top").append("<img src='' class='progress' style='display:block'>");
+        //$(".progress").attr("src", "/static/progress.gif");
+        //$(".manipulate").attr("style", "display:none");
+        //$(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
+        //$(".facetopimg").attr("src", src);
         var img = $(".facetopimg")[0];
         img.onload = function () {
             var base64img1 = getBase64Image(img);
             var formData = new FormData();
-            formData.append("img", base64img1);
+            formData.append("base64", base64img1);
             $.ajax({
                 url: encodeglobalurl,
                 method: "POST",
@@ -274,14 +274,14 @@ $(function () {
             img.height = 800;
             img.width = 800;
             $(".face-top").empty();
-            $(".face-top").append("<img src='' class='progress' style='display:block'>");
-            $(".progress").attr("src", "/static/progress.gif");
-            $(".manipulate").attr("style", "display:none");
-            // $(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
-            // $(".facetopimg").attr("src", src);
-            // $(".face-top").append(img);
+            //$(".face-top").append("<img src='' class='progress' style='display:block'>");
+            //$(".progress").attr("src", "/static/progress.gif");
+            //$(".manipulate").attr("style", "display:none");
+            //$(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
+            //$(".facetopimg").attr("src", img.src);
+            $(".face-top").append(img);
             var formData = new FormData();
-            formData.append("img", img.src);
+            formData.append("base64", img.src);
             $.ajax({
                 url: encodeglobalurl,
                 method: "POST",
@@ -305,21 +305,21 @@ $(function () {
         $(".cover").css({"background": "rgba(0,0,0,0.8)", "border": "none"});
         var searchUrl = $(".imgUrl").val();
         $(".face-top").empty();
-        $(".face-top").append("<img src='' class='progress' style='display:block'>");
-        $(".progress").attr("src", "/static/progress.gif");
-        $(".manipulate").attr("style", "display:none");
+        //$(".face-top").append("<img src='' class='progress' style='display:block'>");
+        //$(".progress").attr("src", "/static/progress.gif");
+        //$(".manipulate").attr("style", "display:none");
         $(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
         $(".facetopimg").attr("src", searchUrl);
         var img = $(".facetopimg")[0];
         img.setAttribute("crossOrigin", 'Anonymous')
         img.onload = function () {
             var base64img1 = getBase64Image(img);
-            console.log(base64img1.length);
+            //console.log(base64img1.length);
             $.ajax({
                 url: encodeglobalurl,
                 method: "POST",
                 data: {
-                    img: base64img1,
+                    base64: base64img1,
                 },
                 success: function (data) {
                     sessionStorage.setItem("name", data.name);

@@ -149,6 +149,7 @@ $(function () {
                 var base64img = $(".face-top").children("img")[0].src;
             }
             formData.append("imgsrc", imgsrc);
+            formData.append("base64", base64img);
             $.ajax({
                 url: globalurl,
                 method: "POST",

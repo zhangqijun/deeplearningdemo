@@ -120,13 +120,13 @@ def glow_interpolation():
     return render_template('glow_interpolation.html')
 
 
-@app.route("/glow_direction", methods=['GET'])
+@app.route("/glow_manipulate", methods=['GET'])
 def glow_manipulate():
     '''
     manipulate face att use glow
     :return: html
     '''
-    return render_template('glow_direction.html')
+    return render_template('glow_manipulate.html')
 
 
 @app.route("/glow_manipulate_encode", methods=['POST'])
