@@ -73,6 +73,7 @@ url为项目地址
 post请求提交form表单,输入{base64:图片base64},返回json计算结果.结构可参照demo页面Response JSON.
 
 以python3为例
+
 ```
 import requests
 import base64
@@ -80,3 +81,10 @@ res = requests.post("https://pc.zzz9958123.com:5000/attribute_predict",data={"ba
 print(res)
 ```
 
+# todo
+项目的初衷是打造一个通用的深度学习推理平台，可用于 demo 展示，和类似百度 AI 推理平台的功能。现在 demo 展示的部分是完成了。但是推理平台还差了些意思，做了一些妥协只能用于 demo 了，因为显存不足以加载过多的模型，现在要每次加载后推理然后销毁。就导致了推理耗时增大很多还有并发量很低。 AI 推理平台应该是要另换一套架构去做，想到的几个点是：
+
+*   榨干显卡性能，高并发
+*   key，secret 机制
+*   账号及充值方法
+*   ....

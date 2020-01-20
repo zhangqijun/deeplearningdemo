@@ -1,4 +1,4 @@
-version: "3.3"
+version: "2.0"
 
 services:
   demo_cpu_server:
@@ -29,3 +29,19 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
     command: 'gunicorn --workers=5 demo_gpu_server:app --certfile=ssl/cert --keyfile=ssl/key -b 0.0.0.0:5001  -t 600'
+  # ocr
+  chineseocr:
+    image: "zergmk2/chineseocr:pytorch1.0-cpu-py3.6"
+    restart: "always"
+    ports:
+      - "90:8080"
+  ocrmypdf-web:
+    image: "sseemayer/ocrmypdf-web"
+    restart: "always"
+    ports:
+      - "91:8000"
+  ocrserver:
+    image: "otiai10/ocrserver"
+    restart: "always"
+    ports:
+      - "92:8080"

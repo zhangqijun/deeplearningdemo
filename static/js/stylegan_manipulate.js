@@ -203,8 +203,8 @@ $(function () {
         //$(".face-top").append("<img src='' class='progress' style='display:block'>");
         //$(".progress").attr("src", "/static/progress.gif");
         //$(".manipulate").attr("style", "display:none");
-        //$(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
-        //$(".facetopimg").attr("src", src);
+        $(".face-top").append("<img class='facetopimg' src='' style='display:none'>");
+        $(".facetopimg").attr("src", src);
         var img = $(".facetopimg")[0];
         img.onload = function () {
             var base64img1 = getBase64Image(img);
