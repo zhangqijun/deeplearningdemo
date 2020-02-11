@@ -7,7 +7,7 @@ It can be divided into CPU version and GPU version. Some project will adopt GPU 
 
 * Large model uses docker container inference,and destroy the container after completion
 
-[[中文说明]](/readme_cn.md) [[deploy]](https://pc.zzz9958123.com:5000) [[video tutorial]](https://youtu.be/qS3-gk3_UBI)
+[[中文说明]](/readme_cn.md) [[deploy]](https://pc.zzz9958123.com:5000) [[video tutorial]](https://www.acfun.cn/v/ac12723105)
 
 # sample
 <p align="center">openface <br> <img src="./static/static_img/openfacesample.png" ></p>

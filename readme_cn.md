@@ -5,7 +5,7 @@
 * 小模型常驻内存cpu推理
 * 大模型以docker容器推理,完成后销毁容器
 
-[[部署]](https://pc.zzz9958123.com:5000) [[视频介绍]](https://youtu.be/qS3-gk3_UBI)
+[[部署]](https://pc.zzz9958123.com:5000) [[视频介绍]](https://www.acfun.cn/v/ac12723105)
 
 # 示例
 <p align="center">关键点检测openface <br> <img src="./static/static_img/openfacesample.png" ></p>
