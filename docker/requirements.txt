@@ -17,7 +17,7 @@ numpy
 nmslib
 pymysql
 imutils
-tensorflow==1.15.2
+tensorflow==2.5.1
 dlib
 imageio
 gunicorn
